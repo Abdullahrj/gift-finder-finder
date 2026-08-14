@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      wishlist_items: {
+        Row: {
+          created_at: string | null
+          id: string
+          image_url: string | null
+          is_favorite: boolean | null
+          name: string
+          notes: string | null
+          price: number
+          store_name: string | null
+          store_url: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          is_favorite?: boolean | null
+          name: string
+          notes?: string | null
+          price: number
+          store_name?: string | null
+          store_url?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          is_favorite?: boolean | null
+          name?: string
+          notes?: string | null
+          price?: number
+          store_name?: string | null
+          store_url?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
